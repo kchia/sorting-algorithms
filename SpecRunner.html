@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Mocha Spec Runner</title>
+  <link rel="stylesheet" href="lib/mocha/mocha.css">
+  <script src="lib/jquery.js"></script>
+  <script src="lib/underscore.js"></script>
+  <script src="lib/mocha/mocha.js"></script>
+  <script src="lib/chai/chai.js"></script>
+  <script src="lib/sinon/sinon.js"></script>
+  <script src="lib/cardboard.js"></script>
+  <script>
+    mocha.setup({ui: 'bdd', reporter: cardboard});
+    window.expect = chai.expect;
+    $(function() {
+      window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
+    });
+  </script>
+  <script src="src/bubble.js"></script>
+  <script src="src/insertion.js"></script>
+  <script src="src/merge.js"></script>
+  <script src="src/quick.js"></script>
+  <script src="src/selection.js"></script>
+  <script src="src/heap.js"></script>
+  <script src="spec/bubbleSpec.js"></script>
+  <script src="spec/insertionSpec.js"></script>
+  <script src="spec/mergeSpec.js"></script>
+  <script src="spec/quickSpec.js"></script>
+  <script src="spec/selectionSpec.js"></script>
+  <script src="spec/heapSpec.js"></script>
+</head>
+<body>
+<div id="mocha"></div>
+</body>
+</html>
+
