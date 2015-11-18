@@ -9,23 +9,31 @@
  *    Swaps the values at the position and at the minimum index.
  */
 
+var swap = function(arr, index, minimum) {
+  var temp = arr[index];
+  arr[index] = arr[minimum];
+  arr[minimum] = temp;
+  return arr;  	
+};
+
 var selectionSort = function (array) {
   var len = array.length;
   if(!Array.isArray(array)) {
-  	return array;
+    return array;
   }
 
-  var swap = function(arr, index, minimum) {
-  	
-  };
-  
   for(var i = 0; i < len - 1; i++) {
   	var min = i;
-  	for(var j = 0; j < len; j++) {
-  		if(array[j] < array[min]) {
+  	for(var j = i + 1; j < len; j++) {
+  		if(array[j].value < array[min].value) {
   			min = j;
   		}
   	}
-  	swap(array, i, min);
-  }  
+
+    if(min !== i) {
+      swap(array, i, min);
+    }
+  }
+  console.log(array);
+  return array;  
 };
