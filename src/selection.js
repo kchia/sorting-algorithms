@@ -34,6 +34,5 @@ var selectionSort = function (array) {
       swap(array, i, min);
     }
   }
-  console.log(array);
   return array;  
 };
